@@ -4,9 +4,9 @@ import { ApiTokenPaymentException } from '../exception/api-token-payment.excepti
 
 export class ApiTokenCheckMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
-    if (req.headers['api-token'] != 'my-token') {
-      throw new ApiTokenPaymentException();
-    }
+    // if (req.headers['api-token'] != 'my-token') {
+    //   throw new ApiTokenPaymentException();
+    // }
     next();
   }
 }
